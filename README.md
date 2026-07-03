@@ -19,7 +19,7 @@ Open `index.html` in a browser. That's the whole stack.
 1. Settings → Pages → Deploy from branch (`main`, root).
 2. Custom domain: `aureliusdynamic.com` (kept in `CNAME`) → Enforce HTTPS.
 3. DNS at your registrar:
-   - Apex `A` records → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+   - Apex `A` records → `x`, `y`, `z`, `alpha`
    - `www` `CNAME` → `<your-github-user>.github.io`
 
 ## Status
