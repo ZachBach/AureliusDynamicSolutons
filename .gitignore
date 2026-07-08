@@ -1,0 +1,30 @@
+# The published site is the single self-contained index.html.
+# Everything below is source-of-truth, build tooling, or sensitive
+# material that should stay local and out of the public repo.
+
+# DesignComposer source documents (landing page, prototype, pitch deck, mark)
+*.dc.html
+uploads/
+
+# Un-bundled page source + DesignComposer runtime/engine
+deploy-src.html
+deck-stage.js
+image-slot.js
+support.js
+
+# Preview thumbnail artifact
+.thumbnail
+
+# Nested duplicate deploy trees (the served site is the repo root)
+deploy/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.idea/
+.vscode/
+*.log
+node_modules/
