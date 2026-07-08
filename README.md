@@ -1,37 +1,69 @@
-# Aurelius Dynamic Solutions — aureliusdynamic.com
+<div align="center">
 
-> Code shaping the world — one line of code at a time.
+# Aurelius Dynamic Solutions
 
-The production landing site for **Aurelius Dynamic Solutions**, open-sourced as a **test concept**. Fork it, study it, build on it.
+**Code shaping the world — one line at a time.**
 
-## What it is
+The official landing site for Aurelius Dynamic Solutions LLC — a single, self-contained web experience with zero runtime dependencies.
 
-- **One file.** The entire site is a single self-contained `index.html` — every style, script, and font inlined. No build step, no dependencies, no framework install.
-- **Zero surface area.** No external requests at runtime, no analytics, no cookies, no backend. The contact form opens a pre-addressed email draft to `build@aureliusdynamic.com`; the site itself collects and transmits nothing.
-- **Interactive.** A live hero console (try `help` or `solve <your problem>`), a simulated three-engine pipeline demo, scrollspy navigation, animated counters, and a mock engagement-brief form.
+[aureliusdynamic.com](https://aureliusdynamic.com) · [Contact](mailto:build@aureliusdynamic.com)
 
-## Run it
+</div>
 
-Open `index.html` in a browser. That's the whole stack.
+---
 
-## Deploy (GitHub Pages)
+## Overview
 
-1. Settings → Pages → Deploy from branch (`main`, root).
-2. Custom domain: `aureliusdynamic.com` (kept in `CNAME`) → Enforce HTTPS.
-3. DNS at your registrar:
-   - Apex `A` records → `x`, `y`, `z`, `alpha`
+This repository contains the production source for the Aurelius Dynamic Solutions marketing site. The entire experience — markup, styling, scripts, and fonts — is delivered from a single [`index.html`](index.html) file. There is no build step, no framework, and no external runtime footprint.
+
+## Highlights
+
+- **Single-file architecture.** The complete site is one self-contained `index.html`; every style, script, and font is inlined. No bundler, no dependencies, no install.
+- **Privacy by design.** No external requests at runtime, no analytics, no cookies, and no backend. The contact form opens a pre-addressed email draft to `build@aureliusdynamic.com` — the site itself collects and transmits nothing.
+- **Fully responsive.** Layouts, typography, and interactions adapt from mobile through ultrawide displays.
+- **Interactive by default.** Features a live hero console (try `help` or `solve <your problem>`), a simulated three-engine pipeline demo, scrollspy navigation, animated counters, and an engagement-brief form.
+
+## Getting Started
+
+The site is fully static and requires no tooling.
+
+```bash
+# Clone the repository
+git clone https://github.com/<your-org>/AureliusDynamicSolutions.git
+cd AureliusDynamicSolutions
+```
+
+Open `index.html` in any modern browser — that is the entire stack. For a local server that mirrors production paths, you may optionally run:
+
+```bash
+python -m http.server 8000
+# then visit http://localhost:8000
+```
+
+## Deployment
+
+The site is deployed via **GitHub Pages** from the repository root.
+
+1. **Pages:** Settings → Pages → Deploy from branch (`master`, root).
+2. **Custom domain:** `aureliusdynamic.com` (configured in [`CNAME`](CNAME)) with **Enforce HTTPS** enabled.
+3. **DNS** (at your registrar):
+   - Apex `A` records → GitHub Pages IP addresses
    - `www` `CNAME` → `<your-github-user>.github.io`
 
-## Status
+## Project Status
 
-Test concept — expect sharp edges. Team profiles are placeholders, and all console/demo output is illustrative, not real telemetry.
+Actively maintained. Certain content — including team profiles and console/demo output — is illustrative and provided for demonstration purposes rather than as live data.
 
 ## License
 
 Released under the [MIT License](LICENSE).
 
-The **Aurelius** name, wordmark, and hexagon mark appear for demonstration; no trademark rights are granted.
+Copyright © 2026 Aurelius Dynamic Solutions LLC. The **Aurelius** name, wordmark, and hexagon mark are used for identification and demonstration; no trademark rights are granted.
 
 ---
 
+<div align="center">
+
 *Solve · Validate · Ship · Repeat*
+
+</div>
