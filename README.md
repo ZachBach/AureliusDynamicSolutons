@@ -14,14 +14,26 @@ The official landing site for Aurelius Dynamic Solutions LLC — a single, self-
 
 ## Overview
 
-This repository contains the production source for the Aurelius Dynamic Solutions marketing site. The entire experience — markup, styling, scripts, and fonts — is delivered from a single [`index.html`](index.html) file. There is no build step, no framework, and no external runtime footprint.
+This repository contains the production source for the Aurelius Dynamic Solutions marketing site, plus the two Lab applications deployed on the same domain. The landing experience — markup, styling, scripts, fonts, and the WebGPU engine — is delivered from a single [`index.html`](index.html) file. There is no build step and no external runtime footprint.
 
 ## Highlights
 
-- **Single-file architecture.** The complete site is one self-contained `index.html`; every style, script, and font is inlined. No bundler, no dependencies, no install.
-- **Privacy by design.** No external requests at runtime, no analytics, no cookies, and no backend. The contact form opens a pre-addressed email draft to `build@aureliusdynamic.com` — the site itself collects and transmits nothing.
+- **WebGPU + TSL hero.** The hero renders a live electromagnetic-helix particle field — a Three.js `WebGPURenderer` compute pass written in TSL (Three.js Shading Language) that spring-assembles ~20k particles into twin helical strands, with pointer-reactive forces. It falls back to WebGL2 automatically (the HUD reads `RENDER // WEBGPU · TSL` or `WEBGL2 · TSL`), respects `prefers-reduced-motion`, idles off-screen, and removes itself cleanly if graphics init fails.
+- **Single-file landing page.** The complete landing site is one self-contained `index.html`; every style, script, font, and the Three.js build are inlined. No bundler, no CDN, no install.
+- **Privacy by design.** The landing page makes no external requests at runtime — no analytics, no cookies, no backend. The contact form opens a pre-addressed email draft to `build@aureliusdynamic.com` — the site itself collects and transmits nothing.
 - **Fully responsive.** Layouts, typography, and interactions adapt from mobile through ultrawide displays.
-- **Interactive by default.** Features a live hero console (try `help` or `solve <your problem>`), a simulated three-engine pipeline demo, scrollspy navigation, animated counters, and an engagement-brief form.
+- **Interactive by default.** Features a live hero console (try `help`, `solve <your problem>`, `helix`, or `ikos`), a simulated three-engine pipeline demo, scrollspy navigation, animated counters, and an engagement-brief form.
+
+## The Lab
+
+Two working research instruments are deployed on this domain and featured in the landing page's **Lab** section:
+
+| App | Path | What it is |
+| --- | --- | --- |
+| **Electromagnetic Helix Reactor** | [`/helix/`](helix/) | A browser-native digital twin of a helical-antenna plasma reactor — ~18k macro-electrons under a Boris integrator, Monte-Carlo collisions, live 3D diagnostics, and a dusty-plasma module. Fully self-hosted (React, Babel, and Three.js are vendored in [`helix/vendor/`](helix/vendor/)). |
+| **IKOS — Iterative Knowledge OS** | [`/ikos/`](ikos/) | A knowledge-graph runtime rendered four ways — Book, Graph, Terminal, and Orbit — from one living state. Ships as a self-contained bundle with an offline-first service worker; the optional 3D Orbit view loads Three.js modules from a CDN at runtime. |
+
+Both apps are copies of their source repositories' built output, adjusted only for subdirectory serving (relative service-worker and manifest paths for IKOS).
 
 ## Getting Started
 
