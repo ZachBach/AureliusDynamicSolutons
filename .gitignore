@@ -10,7 +10,7 @@ uploads/
 deploy-src.html
 deck-stage.js
 image-slot.js
-support.js
+/support.js
 
 # Preview thumbnail artifact
 .thumbnail
