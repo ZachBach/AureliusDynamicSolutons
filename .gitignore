@@ -18,6 +18,10 @@ image-slot.js
 # Nested duplicate deploy trees (the served site is the repo root)
 deploy/
 
+# Nested standalone repo — a separate product with its own git remote,
+# not part of the Aurelius site deploy
+echoGalaxy/
+
 # OS / editor cruft
 .DS_Store
 Thumbs.db
